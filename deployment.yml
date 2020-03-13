@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: <name_of_deployment>
+ labels:
+  deploymentlabel: <anything>
+  label2: <anything>
+  label3: <any_random_value>
+spec:
+  template:
+   metadata:
+    name: <pod_name>
+    labels:
+     podlabel: XXXX
+  spec:
+   containers:
+   - name: <container_name>
+     image: <image_name>
+  selector:
+   matchLabels:
+    podlabel: XXXX
